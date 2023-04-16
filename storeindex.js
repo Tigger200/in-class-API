@@ -11,8 +11,8 @@ router.get('/', function (req, res, next) {
             console.error(err);
             res.status(500).send('There was a problem reading the file')
             return;
-
         }
+        
         res.json(JSON.parse(data));
             const newJerseys = {
             id: (jersey.length + 1).toString(),
