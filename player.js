@@ -6,7 +6,6 @@ const players = [
     "photoUrls": ('https://static.clubs.nfl.com/image/private/t_editorial_landscape_12_desktop/v1628019599/bills/xlurigsltjgvkdewsign'),
     "status": "under contract"},  
   
-
   { "id": 14,
     "position": 'Wide Reciever',
     "name": "Stefon Diggs",
