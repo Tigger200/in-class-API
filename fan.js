@@ -1,4 +1,5 @@
-    const Customer = [ {"customer": .378,
+    const Customer = [ 
+{  "customer": .378,
     "name": 'Margaret Schmidle',
     "address":'100 Summit Avenue Orchard Park, NY 14220', 
     "phone": '(716)-674-7466',
@@ -16,6 +17,13 @@
 {   "Customer": .357,
     "name": "Fred Lehman",
     'phone': '(770)-827-6243',
-    "address": '101 Karalyle Ave. Buffalo, NY 14224',
+    "address": '101 Union Ave. Tonawanda, NY 14224',
     "status": "Elite",
+},
+
+{   "Customer": .365,
+    "name": "Jeanne Stephan",
+    'phone': '(716)-874-7837',
+    "address": '101 Karalyle Ave. Buffalo, NY 14229',
+    "status": "Preferred",
 }]
