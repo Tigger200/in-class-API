@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-const fs = require('fs');
+const fs = require('fs'); .
 
 const STORE_FILE = './data/store.json';
 
