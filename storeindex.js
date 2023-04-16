@@ -55,7 +55,7 @@ router.post('/', (req, res) => {
         jersey.push(newJersey)
 
         //writes our new array to the json file after stringifying it/converting back to json
-        fs.writeFile(JERSEY_FILE, JSON.stringify(store), err => {
+        fs.writeFile(JERSEY_FILE, JSON.stringify(jersey), err => {
             if (err) {
                 console.error(err);
                 res.status(500).send('There was a problem writing the file')
