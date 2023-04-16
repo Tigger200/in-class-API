@@ -9,13 +9,13 @@ hostname = 'localhost';
 // create the server
 const server = http.createServer((req, res,) => {
     const urlobj = url.parse(req.url, true);
-    const pathname = urlobj.pathname;
-    console.log (pathname);
+    const jersey = urlobj.jersey;
+    console.log (jersey);
 });
 
 // make the server listen to request at a given port
-    server.listen(port, hostname, () => {
-    console.log('the server is running at', '${hostname}:${port}')
+    server.listen(3000, localhost, () => {
+    console.log('the server is running at', '${localhost}:${3000}')
 })
 
 
