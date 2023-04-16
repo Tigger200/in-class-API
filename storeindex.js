@@ -2,11 +2,11 @@ var express = require('express');
 var router = express.Router();
 const fs = require('fs'); 
 
-const STORE_FILE = './data/store.json';
+const JERSEY_FILE = './data/jersy.json';
 
 /* GET users listing. */
 router.get('/', function (req, res, next) {
-    fs.readFile(store_FILE, 'utf-8', (err, data) => {
+    fs.readFile(JERSEY_FILE, 'utf-8', (err, data) => {
         if (err) {
             console.error(err);
             res.status(500).send('There was a problem reading the file')
@@ -21,8 +21,8 @@ router.get('/', function (req, res, next) {
     })
 });
 
-router.get('/store/:id', function (req, res) {
-    fs.readFile(store_FILE, 'utf-8', (err, data) => {
+router.get('/jersey/:id', function (req, res) {
+    fs.readFile(JERSEY_FILE, 'utf-8', (err, data) => {
         if (err) {
             console.error(err);
             res.status(500).send('There was a problem reading the file')
@@ -35,7 +35,7 @@ router.get('/store/:id', function (req, res) {
 //Post a new jersey
 
 router.post('/', (req, res) => {
-    fs.readFile(STORE_FILE, 'utf-8', (err, data) => {
+    fs.readFile(JERSEY_FILE, 'utf-8', (err, data) => {
         if (err) {
             console.error(err);
             res.status(500).send('There was a problem reading the file')
@@ -55,7 +55,7 @@ router.post('/', (req, res) => {
         jersey.push(newJersey)
 
         //writes our new array to the json file after stringifying it/converting back to json
-        fs.writeFile(STORE_FILE, JSON.stringify(store), err => {
+        fs.writeFile(JERSEY_FILE, JSON.stringify(store), err => {
             if (err) {
                 console.error(err);
                 res.status(500).send('There was a problem writing the file')

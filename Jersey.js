@@ -23,7 +23,7 @@ const Jersey = [
   
   
    {"id": 50.1,
-    "product": "Jersey',
+    "product": 'Jersey',
     "name": "Greg Rousseau",
     "photoUrls": ['https://fanatics.frgimages.com/buffalo-bills/mens-nike-josh-allen-royal-buffalo-bills-vapor-untouchable-limited-jersey_pi3161000_ff_3161815_full.jpg?_hv=2&w=340'],
     "priceInDollars": 95.99,
