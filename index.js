@@ -1,4 +1,4 @@
-// importing built in Node modules
+// importing built in Node modules (HTTP & URL)
 const http = require('http');
 const url = require('url');
 
@@ -7,17 +7,18 @@ const port = 3000;
 hostname = 'localhost'; 
 
 // create the server
-const server = http.createServer((req, res,) = => {
-    const url = url.parse(req.url, true);
-    const pathname = url.pathname;
+const server = http.createServer((req, res,) => {
+    const urlobj = url.parse(req.url, true);
+    const pathname = urlobj.pathname;
     console.log (pathname);
-})
-
-server.listen(port, hostname, () => {
-    crossOriginIsolated.log(the server is running at ${hostname}:${port})
-})
+});
 
 // make the server listen to request at a given port
+    server.listen(port, hostname, () => {
+    console.log('the server is running at', '${hostname}:${port}')
+})
+
+
 
 
 

@@ -5,8 +5,8 @@
     "status": 'Preferred',
 },
 
-    
-    {"Customer": .299,
+
+   {"Customer": .299,
     "name": "Shannon Poos",
     "address": '200 Good Mews Ct. Sandy Springs, GA 30358',
     'phone': '(770)-828-2243',
@@ -15,7 +15,7 @@
 
 {   "Customer": .357,
     "name": "Fred Lehman",
-    'phone': (770)-827-6243,
+    'phone': '(770)-827-6243',
     "address": '101 Karalyle Ave. Buffalo, NY 14224',
     "status": "Elite",
 }]
