@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 const fs = require('fs'); 
 
-const JERSEY_FILE = './data/jersy.json';
+const JERSEY_FILE = './jersey.json';
 
 /* GET users listing. */
 router.get('/', function (req, res, next) {
@@ -12,16 +12,17 @@ router.get('/', function (req, res, next) {
             res.status(500).send('There was a problem reading the file')
             return;
         }
-        
+
         res.json(JSON.parse(data));
-            const newJerseys = {
-            id: (jersey.length + 1).toString(),
-            name: req.body.params,
-        }
+        //     const newJerseys = {
+        //     id: (jersey.length + 1).toString(),
+        //     name: req.body.params,
+        // }
     })
 });
 
 router.get('/jersey/:id', function (req, res) {
+    console.log("jerseyId")
     fs.readFile(JERSEY_FILE, 'utf-8', (err, data) => {
         if (err) {
             console.error(err);
@@ -29,10 +30,17 @@ router.get('/jersey/:id', function (req, res) {
             return;
 
         }
-        res.json(JSON.parse(data)); 
+        data = JSON.parse(data)
+        console.log(data)
+        const id = req.params.id
+        let jersey = data.find((jersey) => {
+            console.log(jersey)
+            return jersey.id === id
+        })
+        res.json(JSON.parse(jersey)); 
 });
 })
-//Post a new jersey
+//Post a new jersey 
 
 router.post('/', (req, res) => {
     fs.readFile(JERSEY_FILE, 'utf-8', (err, data) => {
